@@ -1,0 +1,135 @@
+.service_container {
+  background-color: var(--dark);
+  padding: 129px 0 80px;
+  color: #fff;
+  position: relative;
+}
+
+.belowmain {
+  margin-top: 50px;
+}
+
+.service_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  background-color: var(--dark);
+  padding-top: 70px;
+  margin-bottom: 120px;
+}
+
+.service_text {
+  width: 50%;
+  font-size: 22px;
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+.service_title_container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.service_title_container span {
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--dark);
+  -webkit-text-stroke: 1px #fff;
+}
+
+.service_title_container span:hover {
+  color: #d9d9d9;
+  transition-duration: 0.5s;
+}
+
+.service_category_title {
+  display: flex;
+  align-items: center;
+}
+
+.circle_container {
+  width: 72px;
+  height: 72px;
+  background-image: url("../../assets//image/landingPage/dashed_circle.svg");
+  display: grid;
+  place-items: center;
+  margin-left: 5px;
+  /* animation: round 5s linear infinite; */
+}
+
+.service_category_title h3 {
+  margin: 0 0 0 30px;
+  font-size: 38px;
+  line-height: 95%;
+  letter-spacing: 12px;
+  font-weight: 500;
+}
+.design_text {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 58px 0 109px 101px;
+  background-color: var(--dark);
+}
+.design_text p {
+  font-size: 22px;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+/* @keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+@media only screen and (max-width: 768px) {
+  .service_container {
+    background-color: var(--dark);
+    padding: 0 0 80px 25px;
+    color: #fff;
+    position: relative;
+  }
+  .service_header {
+    display: inline-block;
+    padding-top: 70px;
+    margin-bottom: 0;
+  }
+  .service_title_container span {
+    font-size: 50px;
+  }
+  .service_text {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 10px 0;
+    margin-left: 5px;
+  }
+  .design_text {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    padding: 58px 0 80px 50px;
+    background-color: var(--dark);
+    gap: 20px;
+  }
+
+  .design_text p {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+  }
+  .service_category_title h3 {
+    font-size: 25px;
+    letter-spacing: 0.2em;
+  }
+}

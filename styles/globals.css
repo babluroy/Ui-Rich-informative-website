@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Matter";
+  src: url("../assets/fronts/matter/Matter-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../assets/fronts/matter/Matter-Medium.ttf");
+  font-weight: medium;
+  font-style: normal;
+}
+
+:root {
+  --dark: #181818;
+  --green: #80fb8d;
+  --blue: #6587ff;
+  --pink: #ff5975;
+  --gray-light: #d4d4d4;
+  --gray-medium: #aaaaaa;
+  --gray-dark: #6a6a6a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Matter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+}
+
+/* Container */
+
+.container {
+  max-width: 1234px;
+  margin: 0 auto;
+  padding: 0 10px;
+}

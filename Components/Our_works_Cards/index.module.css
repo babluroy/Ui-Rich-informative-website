@@ -1,0 +1,67 @@
+.cardspart {
+  margin-top: 100px;
+}
+
+.cardspart img {
+  width: 100%;
+  height: auto;
+}
+
+.cardspart h1 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  position: relative;
+  top: 80px;
+  margin-left: 5px;
+}
+.spanpart {
+  margin-left: 5px;
+  color: white;
+}
+.spanpart span:nth-child(1) {
+  background-color: #80fb8d;
+}
+.spanpart span:nth-child(2) {
+  background-color: #6587ff;
+}
+.spanpart span:nth-child(3) {
+  background-color: #ff5975;
+}
+
+.cardspart span {
+  border-radius: 23px;
+  padding: 14px 25px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 95%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  top: 118px;
+  margin-right: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .cardspart {
+    margin-top: 0;
+  }
+  .cardspart img {
+    width: 100%;
+    height: auto;
+  }
+  .cardspart h1 {
+    font-size: 13px;
+    top: 65px;
+  }
+  .cardspart span {
+    padding: 4px 10px;
+    font-size: 5px;
+    top: 38px;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  .spanpart {
+    margin-left: 0;
+  }
+}

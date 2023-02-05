@@ -1,0 +1,80 @@
+.mainpart {
+  padding: 125px 202px;
+  margin-bottom: 212px;
+  background-color: #191919;
+  border-radius: 42px;
+  position: relative;
+  background-image: url("../../assets/image/Quote/globe.png"),
+    url("../../assets/image/Quote/line.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.mainpart h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 68px;
+  line-height: 74px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.topstar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 42px 0 0;
+}
+
+.downstar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 0 42px;
+}
+
+.button_parts {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.button_quote {
+  display: inline-flex;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: var(--dark);
+  font-size: 1rem;
+  transition: all 0.3s;
+  background-color: var(--blue);
+  color: white;
+}
+
+.button_quote:hover {
+  color: #fff;
+  background-color: var(--pink);
+}
+
+@media only screen and (max-width: 768px) {
+  .mainpart {
+    padding: 100px 50px;
+    margin: 50px auto;
+
+    background-color: #191919;
+    border-radius: 42px;
+    position: relative;
+    background-image: url("../../assets/image/Quote/globe.png"),
+      url("../../assets/image/Quote/line.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%, cover;
+  }
+  .mainpart h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .mainpart img {
+    width: 100px;
+    height: auto;
+  }
+}

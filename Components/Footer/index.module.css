@@ -1,0 +1,138 @@
+.footer {
+  background-color: var(--dark);
+  color: var(--gray-light);
+}
+
+.footer ul li {
+  list-style: none;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.footer ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer ul li a:hover {
+  color: #fff;
+}
+
+.first_row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 7.8125rem 0 9.25rem;
+}
+
+.align_right {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.first_row h2 {
+  font-size: 86px;
+  color: #fff;
+}
+
+.outline {
+  -webkit-text-stroke: 1px #ccc;
+  -webkit-text-fill-color: var(--dark);
+}
+
+.first_row h3 {
+  font-size: 72px;
+  font-weight: 300;
+  background: -webkit-linear-gradient(#fff, #333);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.first_row h3::after {
+  content: "div";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 75%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.last_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 168px;
+}
+.footer_contact p,
+.copyright_band {
+  color: var(--green);
+}
+
+.footer_contact p {
+  font-size: 24px;
+}
+.social_icon_container {
+  display: flex;
+  align-items: center;
+}
+
+.social_icon_container img {
+  margin-right: 26px;
+}
+
+.copyright_band {
+  font-size: 32px;
+}
+.copyright_text {
+  font-size: 18px;
+  color: var(--gray-light);
+}
+
+@media only screen and (max-width: 950px) {
+  .footer ul {
+    padding: 0;
+  }
+  .first_row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 4rem 0 2.5rem;
+  }
+  .first_row h2 {
+    font-size: 55px;
+  }
+
+  .first_row h3 {
+    font-size: 40px;
+  }
+
+  .first_row h3::after {
+    content: "div";
+    position: absolute;
+    left: 10%;
+    top: 60px;
+    width: 75%;
+
+    height: 1px;
+    background-color: #ccc;
+  }
+
+  .align_right {
+    text-align: center;
+    align-self: center;
+    margin-top: 30px;
+  }
+  .social_icon_container {
+    justify-content: space-around;
+  }
+  .social_icon_container img {
+    margin-right: 0;
+  }
+  .last_row {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2.5rem;
+  }
+  .copyright_band {
+    margin-top: 30px;
+  }
+}

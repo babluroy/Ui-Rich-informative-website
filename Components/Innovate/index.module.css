@@ -1,0 +1,164 @@
+.innovate_section {
+  position: relative;
+  margin: 216px auto;
+}
+
+.innovateupper {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.peopleimage {
+  display: block;
+  margin: 0 auto;
+}
+
+.overlayimage {
+  position: absolute;
+  top: 0;
+}
+
+.innovatepart {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.text_container {
+  font-size: 82px;
+  line-height: 98px;
+  font-weight: 400px;
+  color: white;
+  -webkit-text-stroke: 1.2px var(--dark);
+  line-height: 1em;
+}
+
+.text_container:nth-child(1) {
+  margin-right: 15px;
+}
+
+.text_container:hover {
+  color: var(--dark);
+  transition-duration: 0.5s;
+}
+
+.servcetext {
+  position: absolute;
+  font-size: 36px;
+  color: white;
+  font-weight: 400;
+  line-height: 48px;
+  font-style: normal;
+  right: 77px;
+  bottom: 85px;
+  width: 50%;
+}
+
+.imagestar {
+  position: absolute;
+  bottom: 0;
+  border-radius: 42px;
+}
+
+.circle {
+  position: absolute;
+  right: 61px;
+  top: 70px;
+}
+
+.circlearrow {
+  position: absolute;
+  right: 153px;
+  top: 165px;
+}
+
+@media only screen and (max-width: 768px) {
+  .innovate_section {
+    position: relative;
+    margin: 50px auto;
+  }
+  .peopleimage {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-top: 5px;
+  }
+  .overlayimage {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-top: 5px;
+  }
+
+  .innovatepart {
+    position: absolute;
+    top: 10px;
+    left: 7px;
+  }
+
+  .text_container {
+    font-size: 24px;
+    line-height: 0px;
+    -webkit-text-stroke: 1px var(--dark);
+  }
+
+  .text_container:nth-child(1) {
+    margin-right: 5px;
+  }
+
+  .imagestar {
+    border-radius: 5px;
+    width: 60px;
+    height: auto;
+  }
+
+  .circle {
+    right: 20px;
+    top: 10px;
+    width: 80px;
+    height: auto;
+  }
+  .circlearrow {
+    right: 53px;
+    top: 45px;
+    width: 15px;
+    height: auto;
+  }
+  .servcetext {
+    font-size: 12px;
+    line-height: 12px;
+    right: 30px;
+    bottom: 0;
+  }
+  .innovateupper {
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 530px) {
+  .text_container {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 650px) and (max-width: 768px) {
+  .text_container {
+    font-size: 35px;
+  }
+  .innovatepart {
+    top: 20px;
+  }
+  .innovateupper {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 768px) {
+  .text_container {
+    font-size: 50px;
+  }
+  .innovatepart {
+    top: 30px;
+  }
+  .innovateupper {
+    margin-bottom: 40px;
+  }
+}

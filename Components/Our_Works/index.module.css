@@ -1,0 +1,47 @@
+.mainpart {
+  margin-top: 199px;
+}
+
+.client {
+  font-weight: 400;
+  font-size: 136px;
+  line-height: 110%;
+  color: #181818;
+}
+.book {
+  font-weight: 400;
+  font-size: 136px;
+  line-height: 110%;
+  color: white;
+  -webkit-text-stroke: 1.2px var(--dark);
+}
+
+.book:hover {
+  color: var(--dark);
+  transition-duration: 0.5s;
+}
+
+.happy_client {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  margin-left: 43px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainpart {
+    margin-top: 100px;
+  }
+  .client {
+    font-size: 40px;
+  }
+  .book {
+    font-size: 40px;
+  }
+  .happy_client {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 32px;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,25 @@
+.box_container {
+  background-color: var(--dark);
+  width: 378px;
+  height: 252px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  transition: transform 0.35s ease-in-out;
+}
+
+.box_container h2 {
+  padding: 0 30px;
+  text-align: center;
+  font-size: 42px;
+  line-height: 50px;
+  color: white;
+  transition: transform 0.35s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .box_container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,241 @@
+.mainpart {
+  margin-top: 150px;
+}
+.headertext {
+  font-size: 88px;
+  line-height: 98px;
+  color: var(--dark);
+}
+.below_header {
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--dark);
+  margin-top: 21px;
+}
+.below_peragraph {
+  font-size: 32px;
+  line-height: 32px;
+  margin-top: 21px;
+  margin: 55px 0;
+  width: 400px;
+}
+/* ----------------- */
+.designtext_container {
+  display: flex;
+}
+.designtext_container button {
+  transition-duration: 0.4s;
+  background-color: transparent;
+}
+.designtext_container button:hover {
+  background-color: var(--dark);
+  color: white;
+  transition-duration: 0.4s;
+}
+
+.boxtext_design {
+  font-size: 24px;
+  line-height: 95%;
+  text-align: center;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  border: 1px solid rgba(24, 24, 24, 0.25);
+  border-radius: 37px;
+  padding: 26px 33px;
+  width: 221px;
+  height: 74px;
+  margin-right: 28px;
+}
+.boxtext_design:focus {
+  background-color: #181818;
+  color: #fff;
+}
+.boxtext_technology:focus {
+  background-color: #181818;
+  color: #fff;
+}
+.boxtext_business:focus {
+  background-color: #181818;
+  color: #fff;
+}
+.boxtext_technology {
+  font-size: 24px;
+  line-height: 95%;
+  text-align: center;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  border: 1px solid rgba(24, 24, 24, 0.25);
+  border-radius: 37px;
+  padding: 26px 33px;
+  width: 328px;
+  height: 74px;
+  margin-right: 28px;
+}
+.boxtext_business {
+  font-size: 24px;
+  line-height: 95%;
+  text-align: center;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  border: 1px solid rgba(24, 24, 24, 0.25);
+  border-radius: 37px;
+  padding: 26px 33px;
+  width: 273px;
+  height: 74px;
+}
+/* -------------------- */
+
+.hand_design {
+  width: 100px;
+  height: auto;
+}
+.input_container::placeholder {
+  color: #b7b7b7;
+}
+.budget_input input::placeholder {
+  color: #b7b7b7;
+}
+
+.input_container {
+  outline: none;
+  width: 100%;
+  height: 32px;
+  margin: 42px 0;
+  padding: 28px 0;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  background: transparent;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--dark);
+}
+
+.budget {
+  display: flex;
+  align-items: center;
+}
+.budget_input {
+  width: 100%;
+}
+.budget_input input {
+  outline: none;
+  width: 100%;
+  height: 32px;
+  padding: 28px 0;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  background: transparent;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--dark);
+}
+
+.selector {
+  border: none;
+  text-transform: uppercase;
+  border: 1px solid rgba(24, 24, 24, 0.25);
+  border-radius: 37px;
+  padding: 14px 19px;
+  margin-right: 30px;
+}
+.selector select {
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 95%;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.45em;
+}
+
+.custom_file_input {
+  color: transparent;
+}
+.custom_file_input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom_file_input::before {
+  content: "Add Attachment (Required)";
+  color: black;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 32px;
+  outline: none;
+  cursor: pointer;
+  margin-left: 14px;
+}
+.attachment_part {
+  margin-top: 25px;
+  margin-bottom: 55px;
+}
+
+.button_send {
+  display: inline-flex;
+  padding: 20px 63px;
+  border-radius: 10rem;
+  color: var(--dark);
+  font-size: 1rem;
+  transition: all 0.3s;
+  background-color: var(--green);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.2em;
+  color: #181818;
+  margin-bottom: 176px;
+  border: none;
+}
+
+.button_send:hover {
+  color: #fff;
+  background-color: var(--pink);
+}
+
+@media only screen and (max-width: 768px) {
+  .mainpart {
+    margin: 100px 18px 0 18px;
+  }
+  .designtext_container {
+    display: inline-block;
+  }
+  .hand_design {
+    width: 60px;
+  }
+  .headertext {
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--dark);
+  }
+  .budget {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .budget_input {
+    grid-column: 1/3;
+  }
+  .budget_input input {
+    margin-left: 0;
+  }
+  .attachment_part {
+    display: flex;
+    align-items: center;
+  }
+  .below_peragraph {
+    width: 100%;
+  }
+  .boxtext_technology, .boxtext_business{
+    margin-top: 15px;
+  }
+  .button_send{
+    margin-top: 30px;
+  }
+  .input_container::placeholder {
+    font-size: 22px;
+  }
+}

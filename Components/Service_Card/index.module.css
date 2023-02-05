@@ -1,0 +1,8 @@
+.service_list p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 95%;
+  text-align: center;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
