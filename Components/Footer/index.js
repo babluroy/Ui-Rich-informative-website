@@ -1,4 +1,4 @@
-import React,{ useEffect, useState,useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LinkedInImg from "../../assets/image/LinkedIn.png";
@@ -22,30 +22,29 @@ import { CursorContext } from "@/context/CursorContext";
 import { setCursor } from "@/common-functions";
 
 const Footer = () => {
-
   const getCursorContext = useContext(CursorContext);
 
-  const [year, setYear] = useState("")
+  const [year, setYear] = useState("");
 
   useEffect(() => {
     const date = new Date();
-    setYear(date.getFullYear())
-  },[])
+    setYear(date.getFullYear());
+  }, []);
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
 
   return (
     <footer
       className={footer}
       onMouseEnter={() => {
-        changeCursor("color_change")
-        }}
-        onMouseLeave={() => {
-          changeCursor()
-        }}
+        changeCursor("color_change");
+      }}
+      onMouseLeave={() => {
+        changeCursor();
+      }}
     >
       <div className="container">
         <div className={first_row}>
@@ -86,22 +85,32 @@ const Footer = () => {
         </div>
         <div className={last_row}>
           <div className={footer_contact}>
-            <a href="mailto:info@domain.com" target="_blank"><p>info@domain.com</p></a>
-            <div className={social_icon_container}>
+            <a href="#" target="_blank">
+              <p>uirich@test.com</p>
+            </a>
+            <div
+              className={social_icon_container}
+              onMouseEnter={() => {
+                changeCursor("size_defference");
+              }}
+              onMouseLeave={() => {
+                changeCursor("color_change");
+              }}
+            >
               <a href="#" target="_blank">
                 <Image src={LinkedInImg} width={24} height={24} />
               </a>
               <a href="#" target="_blank">
                 <Image src={InstagramImg} width={24} height={24} />
               </a>
-              <a href="mailto:info@domain.com" target="_blank">
+              <a href="#" target="_blank">
                 <Image src={Email} width={34} height={24} />
               </a>
             </div>
           </div>
           <div className={copyright}>
             <p className={copyright_band}>
-              <span>&copy; </span>UI-RICH
+              <span>&copy; </span>UI-RICH Creatives
             </p>
             <p className={copyright_text}>All Rights Reserved {year}.</p>
           </div>

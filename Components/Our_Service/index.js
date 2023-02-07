@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import style from "./index.module.css";
 import GreenCircle from "../../assets/image/landingPage/green_circle.svg";
 import PinkCircle from "../../assets/image/landingPage/pink_circle.svg";
@@ -8,13 +8,12 @@ import { CursorContext } from "@/context/CursorContext";
 import { setCursor } from "@/common-functions";
 
 const Our_Service = () => {
-
   const getCursorContext = useContext(CursorContext);
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
 
   const designdata = [
     {
@@ -133,17 +132,26 @@ const Our_Service = () => {
     },
   ];
   return (
-    <div className={style.service_container}
+    <div
+      className={style.service_container}
       onMouseEnter={() => {
-      changeCursor("color_change")
+        changeCursor("color_change");
       }}
       onMouseLeave={() => {
-        changeCursor()
+        changeCursor();
       }}
     >
       <div className="container">
         <div className={style.service_header}>
-          <div className={style.service_title_container}>
+          <div
+            className={style.service_title_container}
+            onMouseEnter={() => {
+              changeCursor("size_defference");
+            }}
+            onMouseLeave={() => {
+              changeCursor("color_change");
+            }}
+          >
             <span>Our</span>
             <span>Service</span>
           </div>

@@ -7,6 +7,7 @@ import {
   hero_title,
   hero_body,
   hero_btn,
+  btn,
 } from "./index.module.css";
 import hero_design from "../../assets/image/landingPage/hero-design.png";
 import hero_business from "../../assets/image/landingPage/hero-business.png";
@@ -25,8 +26,9 @@ const Hero = () => {
     tech: "tech",
     business: "business",
   };
-  
+
   const getCursorContext = useContext(CursorContext);
+  const [isHovered, setIsHovered] = useState(false);
 
   const [hoverImage, setHoverImage] = useState("design");
   const [isAutoSlide, setIsAutoSlide] = useState(true);
@@ -62,8 +64,38 @@ const Hero = () => {
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
+
+  const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const button = document.querySelector("#magnet");
+    const position = button.getBoundingClientRect();
+
+    setButtonPosition({
+      x: position.left + position.width,
+      y: position.top + position.height,
+    });
+
+    button.addEventListener("mousemove", function (e) {
+      const x = e.pageX - position.left - position.width / 2;
+      const y = e.pageY - position.top - position.height / 2;
+
+      button.style.transform = "translate(" + x * 0.5 + "px, " + y * 0.5 + "px)";
+
+      // Animation part
+      const xx = e.pageX - button.offsetLeft;
+      const yy = e.pageY - button.offsetTop;
+
+      button.style.setProperty("--xx", xx + "px");
+      button.style.setProperty("--yy", yy + "px");
+    });
+
+    button.addEventListener("mouseout", function () {
+      button.style.transform = "translate(0px, 0px)";
+    });
+  }, []);
 
   return (
     <div className="container">
@@ -75,7 +107,7 @@ const Hero = () => {
               onMouseOver={() => {
                 setHoverImage(hero_categories.design);
                 setIsAutoSlide(false);
-                changeCursor("color_size_change");
+                changeCursor("size_defference");
               }}
               onMouseLeave={() => {
                 setIsAutoSlide(true);
@@ -90,7 +122,7 @@ const Hero = () => {
               onMouseOver={() => {
                 setHoverImage(hero_categories.tech);
                 setIsAutoSlide(false);
-                changeCursor("color_size_change");
+                changeCursor("size_defference");
               }}
               onMouseLeave={() => {
                 setIsAutoSlide(true);
@@ -105,7 +137,7 @@ const Hero = () => {
               onMouseOver={() => {
                 setHoverImage(hero_categories.business);
                 setIsAutoSlide(false);
-                changeCursor("color_size_change");
+                changeCursor("size_defference");
               }}
               onMouseLeave={() => {
                 setIsAutoSlide(true);
@@ -119,8 +151,14 @@ const Hero = () => {
           <p className={hero_body}>
             Transform Your Business with Our Expert Design, Development, and Marketing Services.
           </p>
-          <Link href={Routingvariables.contact} className={hero_btn}>
-            Get Started
+          <Link href={Routingvariables.contact}>
+            <div
+              id="magnet"
+              className={hero_btn}
+              style={{ left: buttonPosition.x, top: buttonPosition.y }}
+            >
+              <span>Get Started</span>
+            </div>
           </Link>
         </div>
         <div className={hero_right}>

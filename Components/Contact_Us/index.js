@@ -76,7 +76,7 @@ const Contact_Us = () => {
              >BUSINESS</button>
             </div>
           <form 
-            action="#"
+            action="https://formspree.io/f/xeqwevor"
             method="POST"        
             className={style.input_form}>
             <input

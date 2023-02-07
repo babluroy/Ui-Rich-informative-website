@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { slider, slide, slide_text, slide_track } from "./index.module.css";
 import BlueStar from "../../assets/image/landingPage/blue_star.svg";
 import PinkStar from "../../assets/image/landingPage/pink_star.svg";
@@ -8,27 +8,27 @@ import { CursorContext } from "@/context/CursorContext";
 import { setCursor } from "@/common-functions";
 
 const LoopSlider = () => {
-
   const getCursorContext = useContext(CursorContext);
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
 
   return (
-    <div className={slider} 
+    <div
+      className={slider}
       onMouseEnter={() => {
-      changeCursor("color_change")
+        changeCursor("color_change");
       }}
       onMouseLeave={() => {
-        changeCursor()
+        changeCursor();
       }}
     >
       <div className={slide_track}>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -36,11 +36,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -48,11 +48,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -60,11 +60,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -72,11 +72,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -84,11 +84,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -96,11 +96,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -108,11 +108,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -120,11 +120,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -132,11 +132,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -144,11 +144,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -156,11 +156,11 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
-          <span className={slide_text}>Innovate</span>
+          <span className={slide_text}>Captivate</span>
         </div>
         <div className={slide}>
           <Image src={GreenStar} />
-          <span className={slide_text}>Captivate</span>
+          <span className={slide_text}>Innovate</span>
         </div>
         <div className={slide}>
           <Image src={BlueStar} />
@@ -168,7 +168,79 @@ const LoopSlider = () => {
         </div>
         <div className={slide}>
           <Image src={PinkStar} />
+          <span className={slide_text}>Captivate</span>
+        </div>
+        <div className={slide}>
+          <Image src={GreenStar} />
           <span className={slide_text}>Innovate</span>
+        </div>
+        <div className={slide}>
+          <Image src={BlueStar} />
+          <span className={slide_text}>Convert</span>
+        </div>
+        <div className={slide}>
+          <Image src={PinkStar} />
+          <span className={slide_text}>Captivate</span>
+        </div>
+        <div className={slide}>
+          <Image src={GreenStar} />
+          <span className={slide_text}>Innovate</span>
+        </div>
+        <div className={slide}>
+          <Image src={BlueStar} />
+          <span className={slide_text}>Convert</span>
+        </div>
+        <div className={slide}>
+          <Image src={PinkStar} />
+          <span className={slide_text}>Captivate</span>
+        </div>
+        <div className={slide}>
+          <Image src={GreenStar} />
+          <span className={slide_text}>Innovate</span>
+        </div>
+        <div className={slide}>
+          <Image src={BlueStar} />
+          <span className={slide_text}>Convert</span>
+        </div>
+        <div className={slide}>
+          <Image src={PinkStar} />
+          <span className={slide_text}>Captivate</span>
+        </div>
+        <div className={slide}>
+          <Image src={GreenStar} />
+          <span className={slide_text}>Innovate</span>
+        </div>
+        <div className={slide}>
+          <Image src={BlueStar} />
+          <span className={slide_text}>Convert</span>
+        </div>
+        <div className={slide}>
+          <Image src={PinkStar} />
+          <span className={slide_text}>Captivate</span>
+        </div>
+        <div className={slide}>
+          <Image src={GreenStar} />
+          <span className={slide_text}>Innovate</span>
+        </div>
+        <div className={slide}>
+          <Image src={BlueStar} />
+          <span className={slide_text}>Convert</span>
+        </div>
+        <div className={slide}>
+          <Image src={PinkStar} />
+          <span className={slide_text}>Captivate</span>
+        </div>
+        <div className={slide}>
+          <Image src={GreenStar} />
+          <span className={slide_text}>Innovate</span>
+        </div>
+        <div className={slide}>
+          <Image src={BlueStar} />
+          <span className={slide_text}>Convert</span>
+        </div>
+        <div className={slide}>
+          <Image src={PinkStar} />
+          <span className={slide_text}>Captivate</span>
         </div>
       </div>
     </div>

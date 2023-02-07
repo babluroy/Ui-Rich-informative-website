@@ -1,21 +1,37 @@
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 import founderImage from "../../assets/image/Founder/founder_image.png";
 import style from "./index.module.css";
 import img1 from "../../assets/image/Founder/LinkedIn.png";
 import img2 from "../../assets/image/Founder/instagram.png";
 import img3 from "../../assets/image/Founder/mail.png";
+import { CursorContext } from "@/context/CursorContext";
+import { setCursor } from "@/common-functions";
 
 const Founder = () => {
+  const getCursorContext = useContext(CursorContext);
+
+  const changeCursor = (changeType) => {
+    const cursor = setCursor(changeType);
+    getCursorContext.setCursorStyle(cursor);
+  };
   return (
     <div className="container">
       <section className={style.founderPart}>
         <div className={style.textpart}>
-          <h3 className={style.header_text}>Meet the</h3>
-          <h3 className={style.header_text}>Founder</h3>
+          <div
+            onMouseEnter={() => {
+              changeCursor("size_defference");
+            }}
+            onMouseLeave={() => {
+              changeCursor();
+            }}
+          >
+            <h3 className={style.header_text}>Meet the</h3>
+            <h3 className={style.header_text}>Founder</h3>
+          </div>
           <p className={style.header_details}>
-            <span className="fw-bold">Sahgal Yadav,</span> Founder, of AlphaRule Creatives and
-            Lesspay.
+            <span className="fw-bold">John Doe,</span> Founder, of UI-RICH Creatives
           </p>
         </div>
         <div className={style.middlepart}>

@@ -9,13 +9,13 @@ import Cursor_Pointer from "@/Components/Cursor_Pointer";
 import { CursorContext } from "@/context/CursorContext";
 
 export default function App({ Component, pageProps }) {
-
   const [isMobile, setIsMobile] = useState(false);
 
   const [cursorStyle, setCursorStyle] = useState({
-    width: 10,
-    height: 10,
-    color: "#000"
+    width: 20,
+    height: 20,
+    color: "#000",
+    mixBlendMode: "difference",
   });
 
   useEffect(() => {
@@ -23,14 +23,13 @@ export default function App({ Component, pageProps }) {
     checkIsMobile();
   }, []);
 
-
   const checkIsMobile = () => {
-    if(window.innerWidth < 1000){
-      setIsMobile(true)
+    if (window.innerWidth < 1000) {
+      setIsMobile(true);
     } else {
-      setIsMobile(false)
+      setIsMobile(false);
     }
-  }
+  };
 
   return (
     <>
@@ -39,11 +38,9 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="UI-RICH" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CursorContext.Provider value={{cursorStyle, setCursorStyle}}>
+      <CursorContext.Provider value={{ cursorStyle, setCursorStyle }}>
         <Layout>
-          {!isMobile && (
-           <Cursor_Pointer />
-          )}
+          {!isMobile && <Cursor_Pointer />}
           <Component {...pageProps} />
         </Layout>
       </CursorContext.Provider>

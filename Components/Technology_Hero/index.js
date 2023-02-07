@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import style from "./index.module.css";
 import arrow from "../../assets/image/Service_Technology/arrow.svg";
 import hero_image from "../../assets/image/Service_Technology/hero image.png";
@@ -7,13 +7,12 @@ import { CursorContext } from "@/context/CursorContext";
 import { setCursor } from "@/common-functions";
 
 const Technology_Hero = () => {
-  
   const getCursorContext = useContext(CursorContext);
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
 
   return (
     <div className="container">
@@ -26,13 +25,15 @@ const Technology_Hero = () => {
             <Image src={arrow}></Image>
           </div>
           <span
-           onMouseEnter={() => {
-            changeCursor("size_change")
+            onMouseEnter={() => {
+              changeCursor("size_defference");
             }}
             onMouseLeave={() => {
-              changeCursor()
+              changeCursor();
             }}
-          >Technology</span>
+          >
+            Technology
+          </span>
           <p>
             Empower your business with our cutting-edge software solutions. Streamline your
             operations, and drive growth with our easy-to-use, cloud-based services.

@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import style from "./index.module.css";
 import img1 from "../../assets/image/landingPage/Our_Clients/img1.png";
 import img2 from "../../assets/image/landingPage/Our_Clients/img2.png";
@@ -15,24 +15,16 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const Our_Clients = () => {
-
   const getCursorContext = useContext(CursorContext);
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
 
   return (
     <div className={style.mainpart}>
-      <div className="container"
-       onMouseEnter={() => {
-        changeCursor("size_change")
-        }}
-        onMouseLeave={() => {
-          changeCursor()
-        }}
-      >
+      <div className="container">
         <>
           <Swiper
             spaceBetween={30}
@@ -44,7 +36,15 @@ const Our_Clients = () => {
             modules={[Autoplay, Pagination]}
             className="mySwiper"
           >
-            <div className={style.upperText}>
+            <div
+              className={style.upperText}
+              onMouseEnter={() => {
+                changeCursor("size_defference");
+              }}
+              onMouseLeave={() => {
+                changeCursor();
+              }}
+            >
               <span>
                 Our <br />
               </span>

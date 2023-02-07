@@ -19,6 +19,7 @@
   background-color: var(--dark);
   padding-top: 70px;
   margin-bottom: 120px;
+  z-index: 1;
 }
 
 .service_text {
@@ -60,7 +61,7 @@
   display: grid;
   place-items: center;
   margin-left: 5px;
-  /* animation: round 5s linear infinite; */
+  animation: round 5s linear infinite;
 }
 
 .service_category_title h3 {
@@ -85,14 +86,14 @@
   text-transform: uppercase;
 }
 
-/* @keyframes round {
+@keyframes round {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
 @media only screen and (max-width: 768px) {
   .service_container {

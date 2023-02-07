@@ -6,6 +6,7 @@
 .upperText {
   position: absolute;
   top: 0;
+  z-index: 1;
 }
 
 .upperText span:nth-child(1) {

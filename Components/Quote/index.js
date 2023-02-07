@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import style from "./index.module.css";
 import startop from "../../assets/image/Quote/right-top.png";
@@ -9,21 +9,21 @@ import { CursorContext } from "@/context/CursorContext";
 import { setCursor } from "@/common-functions";
 
 const Quote = () => {
-
   const getCursorContext = useContext(CursorContext);
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
 
   return (
-    <section className="container"
+    <section
+      className="container"
       onMouseEnter={() => {
-        changeCursor("color_change")
+        changeCursor("color_change");
       }}
       onMouseLeave={() => {
-        changeCursor()
+        changeCursor();
       }}
     >
       <div className={style.quote_container}>

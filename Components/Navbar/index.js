@@ -99,7 +99,7 @@ const Navbar = () => {
           <Link href={Routingvariables.home}>
             {/* <Image src={logo} width={136} height={50}/> */}
             <div className={brand_text}>
-              <h2>Ui-Rich</h2>
+              <h2>UI-RICH.</h2>
             </div>
           </Link>
           <div className={main_nav}>

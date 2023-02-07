@@ -14,18 +14,18 @@
   width: 50%;
 }
 
-.hero_right{
+.hero_right {
   flex: 1;
-  width:50%;
+  width: 50%;
 }
 
-.hero_title_container{
+.hero_title_container {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
 }
 
-.hero_title{
+.hero_title {
   font-size: 96px;
   font-weight: 400;
   line-height: 1.16;
@@ -33,33 +33,56 @@
   -webkit-text-stroke: 1px var(--dark);
 }
 
-.hero_title:hover{
+.hero_title:hover {
   color: var(--dark);
   transition-duration: 0.5s;
 }
-.hero_body{
+.hero_body {
   font-size: 24px;
   line-height: 1.75;
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
-.hero_btn{
+.hero_btn {
   border-radius: 100vw;
   color: var(--dark);
   font-weight: 600;
   background-color: var(--green);
-  padding: 12px 28px ;
-  transition: all ease-in-out .3s;
-  
+  padding: 12px 28px;
+  transition: all ease-in-out 0.3s;
+  width: 147px;
+  margin: 30px 0;
+  transition: 0.15s linear;
+  overflow: hidden;
+
+  display: inline-block;
+}
+
+.hero_btn::before {
+  content: "";
+  position: absolute;
+  top: var(--xx);
+  left: var(--yy);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--dark);
+  transition: width 0.8s, height 0.7s;
+  z-index: -1;
+}
+
+.hero_btn:hover::before {
+  width: 350px;
+  height: 350px;
 }
 .hero_btn:hover {
-  color: var(--dark);
+  color: white;
 }
 
 @media only screen and (max-width: 1300px) {
- 
-  .hero_title{
+  .hero_title {
     font-size: 86px;
     font-weight: 400;
     color: white;
@@ -67,14 +90,13 @@
   }
 }
 
-
 @media only screen and (max-width: 830px) {
   .hero_container {
- padding-top: 110px;
- padding-bottom: 70px;
-  flex-direction: column;
-   align-items: center;
-   justify-content: center;
+    padding-top: 110px;
+    padding-bottom: 70px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero_left {
@@ -82,9 +104,9 @@
     width: 100%;
     margin-bottom: 60px;
   }
-  
-  .hero_right{
-    width:100%;
+
+  .hero_right {
+    width: 100%;
   }
   .hero_right img {
     margin: 0 auto;
@@ -92,8 +114,7 @@
   .hero_title {
     font-size: 50px;
   }
-  .hero_body{
+  .hero_body {
     font-size: 18px;
   }
-  
 }

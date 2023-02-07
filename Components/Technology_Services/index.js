@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import style from "./index.module.css";
 import left_star from "../../assets/image/Service_Technology/left_star.png";
@@ -8,13 +8,12 @@ import { CursorContext } from "@/context/CursorContext";
 import { setCursor } from "@/common-functions";
 
 const Technology_Services = () => {
-
   const getCursorContext = useContext(CursorContext);
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
 
   const service_data = [
     {
@@ -57,13 +56,14 @@ const Technology_Services = () => {
   return (
     <div className={style.mainpart}>
       <div className="container">
-        <div className={style.servicepart}
+        <div
+          className={style.servicepart}
           onMouseEnter={() => {
-            changeCursor("size_change")
-            }}
-            onMouseLeave={() => {
-              changeCursor()
-            }}
+            changeCursor("size_change");
+          }}
+          onMouseLeave={() => {
+            changeCursor();
+          }}
         >
           <p>Our</p>
           <span>Services</span>

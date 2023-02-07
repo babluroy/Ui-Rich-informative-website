@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import peopleimg from "../../assets/image/Innovate/people.png";
 import overlay from "../../assets/image/Innovate/overlay.png";
@@ -10,13 +10,12 @@ import { CursorContext } from "@/context/CursorContext";
 import { setCursor } from "@/common-functions";
 
 const Innovate = () => {
-
   const getCursorContext = useContext(CursorContext);
 
   const changeCursor = (changeType) => {
     const cursor = setCursor(changeType);
-    getCursorContext.setCursorStyle(cursor)
-  }
+    getCursorContext.setCursorStyle(cursor);
+  };
 
   return (
     <div className="container">
@@ -29,19 +28,20 @@ const Innovate = () => {
           <Image className={style.circlearrow} src={circlearrow}></Image>
         </div>
 
-        <div className={style.innovatepart}
-         onMouseEnter={() => {
-          changeCursor("size_change")
+        <div
+          className={style.innovatepart}
+          onMouseEnter={() => {
+            changeCursor("size_defference");
           }}
           onMouseLeave={() => {
-            changeCursor()
+            changeCursor();
           }}
         >
           <div className={style.innovateupper}>
             <span className={style.text_container}>Innovate,</span>{" "}
-            <span className={style.text_container}>Captivate</span> <br />
+            <span className={style.text_container}>Convert</span> <br />
           </div>
-          <span className={style.text_container}>& Convert</span>
+          <span className={style.text_container}>& Captivate</span>
         </div>
         <p className={style.servcetext}>
           "Our Service offerings have helped companies increase efficiency, reduce costs, and drive
